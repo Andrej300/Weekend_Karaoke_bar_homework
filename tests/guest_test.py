@@ -8,5 +8,4 @@ class TestGuest(unittest.TestCase):
 
     def test_guest_has_name(self):
         self.assertEqual("Arnold",self.guest.name)
-
-    
+ 

@@ -9,4 +9,19 @@ class Room:
         self.songs = []
 
 
+    def count_guests(self):
+        return len(self.guests)
+        
+
+    def check_in_guests(self, guest):
+        self.guests.append(guest)
+
+    def check_out_guests(self, guest):
+        for person in self.guests:
+            if person == guest:
+                self.guests.remove(guest)
+       
+
+
+
 
