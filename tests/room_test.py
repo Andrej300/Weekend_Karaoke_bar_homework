@@ -16,8 +16,8 @@ class TestRoom(unittest.TestCase):
         self.guest_3 = Guest("Tamara")
 
         self.song_1 = Song("Hotel California", "Eagles", "rock")
-        self.song_1 = Song("Viva Las Vegas", "Elvis Presley", "Rock and roll")
-        self.song_1 = Song("Billie Jean", "Michael Jackson", "Pop")
+        self.song_2 = Song("Viva Las Vegas", "Elvis Presley", "Rock and roll")
+        self.song_3 = Song("Billie Jean", "Michael Jackson", "Pop")
 
 
 
@@ -40,4 +40,9 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(0, self.room_1.count_guests())
         
 
-        
+    def test_count_songs(self):
+        self.assertEqual(0, self.room_2.count_songs())
+
+    def test_song_was_added_to_room(self):
+        self.room_2.add_songs_to_rooms(self.song_2)
+        self.assertEqual(1, self.room_2.count_songs())

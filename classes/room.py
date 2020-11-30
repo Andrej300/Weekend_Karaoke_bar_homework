@@ -21,7 +21,12 @@ class Room:
             if person == guest:
                 self.guests.remove(guest)
        
+    
+    def count_songs(self):
+        return len(self.songs)
+
+    def add_songs_to_rooms(self,song):
+        self.songs.append(song)
 
 
-
-
+    
